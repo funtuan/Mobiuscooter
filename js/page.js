@@ -352,4 +352,6 @@ function go(n){
 		$(this).removeAttr('hover');
 	});
 }
-setTimeout(function(){go("-1");},15);
+$(window).load(function(){
+	setTimeout(function(){go("-1");},100);
+}
