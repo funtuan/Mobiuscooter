@@ -103,7 +103,7 @@ function runlu(r){
 	if((okarry[0] == 1 && riwhere == 0)||(okarry[2] == 1 && riwhere == 1))bta = 'deactivated="yes"';
 	if((okarry[1] == 1 && riwhere == 0)||(okarry[3] == 1 && riwhere == 1))btb = 'deactivated="yes"';
 	btv.html('<div id="startbt5" '+bta+' class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">直接左轉</div><div id="hitbox"></div></div><div id="startbt6" '+btb+' class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">待轉</div><div id="hitbox"></div></div>');
-	backsec(3);
+	backsec(6);
 	$('.button').click(function() { 
 		if($(this).attr('deactivated') != "yes"){
 			sec = -1;
