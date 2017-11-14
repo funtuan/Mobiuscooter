@@ -302,7 +302,7 @@ function go(n){
 					headv.html("結果：失敗<br>繼續嘗試其他的可能性吧");
 					downv.css("top","385");
 					if(okarry[0] == 1 && okarry[1] == 1 && okarry[2] == 1 && okarry[3] == 1){
-						btv.html('<div id="startbt7" class="object button" style="left: 382px; top: 450px;"><div id="background"></div><div id="text">看結局</div><div id="hitbox"></div></div>');
+						btv.html('<div id="startbt7" class="object button" style="left: 382px; top: 280px;"><div id="background"></div><div id="text">看結局</div><div id="hitbox"></div></div>');
 						$('#startbt7').click(function() { 
 							oldcheck.removeAttr('selected');
 							$("#selone4").attr('selected','yes');
