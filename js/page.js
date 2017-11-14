@@ -140,6 +140,7 @@ function go(n){
 	switch(n)
 	{
 		case "-1":
+			bgCover("https://i.imgur.com/psOsFEp.gif");
 			bgCover("https://thumbs.gfycat.com/PowerlessCharmingGrackle-size_restricted.gif");
 			headv.html("");
 			downv.html("二段式左轉<br>搞不清楚篇")
