@@ -338,5 +338,5 @@ function go(n){
 	tkbutton();
 }
 $(document).ready(function(){
-	setTimeout(function(){go("-1");},100);
+	setTimeout(function(){go("-1");},300);
 });
