@@ -169,10 +169,10 @@ function start(){
 		}
 	}
 	else if(turn_flag==2){
-		if(road_y<canvas.width*1+canvas.height/2+60){
+		if(road_y<canvas.width*1+canvas.height/2-20){
 			road_y+=5;
 		}
-		if(road_y>canvas.width*1+canvas.height/2+50-200){
+		if(road_y>canvas.width*1+canvas.height/2-20-200){
 			if(main_person_turn>-90)
 				main_person_turn--;
 			if(road_x<canvas.width*5/6)
