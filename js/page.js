@@ -352,6 +352,6 @@ function go(n){
 		$(this).removeAttr('hover');
 	});
 }
-$(window).load(function(){
+$(document).ready(function(){
 	setTimeout(function(){go("-1");},100);
-}
+});
