@@ -1,13 +1,16 @@
 var oldcheck = $('#selonehome');
 oldcheck.attr('selected','yes');
 
+var sec = -1;
 var audio = document.createElement("audio");
 audio.src = "assets/sound/car-sudden-braking1.mp3";
-
+$("#redtext").hide();
 
 console.log("ok");
 $('.dot').click(function() { 
 	turn_turn_sign_flag = false;
+	sec = -1;
+	$("#redtext").hide();
 	go($(this).attr('go'));
 	console.log($(this).attr('data-balloon'));
 	oldcheck.removeAttr('selected');
@@ -26,6 +29,38 @@ var downv = $('#downtext');
 var btv = $('#bttext');
 
 var okarry = [0,0,0,0];
+function backsec(n){
+	console.log("sec!");
+	sec = n;
+	$("#redtext").show();
+	timer();
+	function timer(){
+		$('#sec').html(sec);
+		if(sec >0)setTimeout(timer,1000);
+		if(sec == 0){
+			btv.html('');
+			turn_turn_sign_flag = false;
+			$("#redtext").hide();
+			if((okarry[1] == 1 && riwhere == 0)||(okarry[3] == 1 && riwhere == 1)){
+				turn_flag=2;
+				gowhere = 0;
+				oldcheck.removeAttr('selected');
+				$("#selone3").attr('selected','yes');
+				oldcheck = $("#selone3");
+				go("3");
+			}else{
+				turn_flag=3;
+				gowhere = 1;
+				oldcheck.removeAttr('selected');
+				$("#selone3").attr('selected','yes');
+				oldcheck = $("#selone3");
+				go("3");
+			}
+		}
+		sec--;
+	}
+	
+}
 
 function oneright(){
 	headv.html("此路口需要右轉");
@@ -68,7 +103,10 @@ function runlu(r){
 	if((okarry[0] == 1 && riwhere == 0)||(okarry[2] == 1 && riwhere == 1))bta = 'deactivated="yes"';
 	if((okarry[1] == 1 && riwhere == 0)||(okarry[3] == 1 && riwhere == 1))btb = 'deactivated="yes"';
 	btv.html('<div id="startbt5" '+bta+' class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">直接左轉</div><div id="hitbox"></div></div><div id="startbt6" '+btb+' class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">待轉</div><div id="hitbox"></div></div>');
+	backsec(3);
 	$('.button').click(function() { 
+		sec = -1;
+		$("#redtext").hide();
 		turn_turn_sign_flag = false;
 		if($(this).attr('id') == "startbt5"){
 			turn_flag=2;
@@ -102,7 +140,7 @@ function go(n){
 		case "-1":
 			bgCover("https://thumbs.gfycat.com/PowerlessCharmingGrackle-size_restricted.gif");
 			headv.html("");
-			downv.html("你也許不曉得，原來二段式左轉那麼危險")
+			downv.html("二段式左轉<br>搞不清楚篇")
 			downv.css("top","385");
 			btv.html('<div id="startbtst"  class="object button" style="left: 382px; top: 450px;"><div id="background"></div><div id="text">開始</div><div id="hitbox"></div></div>');
 			
@@ -287,7 +325,7 @@ function go(n){
 			});
 			$('#startbtmore').click(function() { 
 				headv.html("<br><b>更多資訊</b>");
-				downv.html('我們不接受贊助<br>請幫忙多多關心這個社會<br>有很多值得你在意的事<br><br><br>歡迎分享<br>請註明來源<br>※不可用於商業用途');
+				downv.html('謝絕贊助<br>請多多關心這個社會<br>有很多值得你在意的事<br><br><br>分享請註明來源<br>不可用於商業用途');
 				downv.css("top","160");
 			
 			});
