@@ -163,7 +163,7 @@ function go(n){
 			resetF();
 			setTimeout(function(){
 				if(goalbn == 2){
-				headv.html("再一個<b>左轉</b><br>就能底達溫暖的家了");
+				headv.html("終於，再一個<b>左轉</b><br>就能抵達溫暖的家了");
 				downv.html("下一個路口，你必須<b>左轉</b><br>選擇將你的機車開往...")
 				downv.css("top","385");
 				var bta = "";
