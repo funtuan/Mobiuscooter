@@ -317,12 +317,12 @@ function go(n){
 			okarry = [0,0,0,0];
 			bgCover("https://i.imgur.com/UgoXnXC.png");
 			headv.html("<br><b>到底該如何左轉</b>");
-			downv.html("<br>兩段式左轉的問題存在已久<br>近年來更是不少廢除的聲浪<br>但廢除與否仍有正反兩方支持<br><br>支持廢除者認為：<br>機車的車速可以跟上汽車，且當年參考日本所設立的兩段式待轉，在日本只有50cc以下的車型需要遵守，一般重型機車並不需要執行待轉。<br>除了動線混亂外，小條的馬路待轉區容易造成事故，且車流量大時更易堵塞。<br><br>反對廢除者認為：<br>日本的機車數量少於台灣甚多，且考慮到駕駛人素質問題，及可能隨時衝出來的人、車、其他動物，讓機車待轉不與汽車爭道才是安全的作法，預防勝於治療。<br><br>");
+			downv.html("兩段式左轉的問題存在已久<br>近年來更是不少廢除的聲浪<br>但廢除與否仍有正反兩方支持<br><br>支持廢除者認為：<br>當年參考日本所設立的兩段式待轉<br>在日本只有50cc以下的車型需要遵守<br>一般重型機車在小條馬路易造成事故、堵塞。<br><br>反對廢除者認為：<br>日本的機車數量少於台灣甚多<br>可能隨時衝出來的人、車、其他動物<br>讓機車待轉不與汽車爭道才是安全的作法<br><br>");
 			downv.css("top","80");
 			btv.html('<div id="startbtpage"  class="object button" style="left: 382px; top: 450px;"><div id="background"></div><div id="text">繼續</div><div id="hitbox"></div></div>');
 			$('#startbtpage').click(function() { 
 				headv.html("<br><b>到底該如何左轉-2</b>");
-				downv.html("<br><br>2017年5月「公共政策網路參與平臺」出現「機車應解除強制二段式左轉」的提案，並吸引5397人附議通過。交通部回應表示，多數地方政府認為不應廢除，但可「因地制宜」進行評估。<br><br>那到底廢除或不廢除哪個比較好呢？現在也沒有一個正確解答。<br>最主要原因在南北、城鄉的用路習慣及車流量存在差異。<br><br>想更加了解差異點的原因在哪？<br><br>請分享我們的遊戲<br>達到一定數量即可解鎖十字路口沙盒模式");
+				downv.html("<br>2017年5月「公共政策網路參與平臺」<br>出現「機車應解除強制二段式左轉」的提案<br>吸引5397人附議通過。交通部回應表示：<br>多數地方政府認為不應廢除<br>但可「因地制宜」進行評估。<br>最主要原因在南北、城鄉的用路習慣差異。<br><br>想更加了解差異點的原因在哪？<br><br>【請分享我們的遊戲】<br>達到一定數量即可解鎖十字路口沙盒模式<br>一起探討車流與待轉的關係");
 				btv.html('<div id="startbtmake" class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">關於作者</div><div id="hitbox"></div></div><div id="startbtmore" class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">FB分享</div><div id="hitbox"></div></div>');
 				$('#startbtmake').click(function() { 
 					headv.html("<br><b>作者們</b>");
