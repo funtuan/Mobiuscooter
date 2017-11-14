@@ -4,6 +4,10 @@ oldcheck.attr('selected','yes');
 var sec = -1;
 var audio = document.createElement("audio");
 audio.src = "assets/sound/car-sudden-braking1.mp3";
+var tkaudio = document.createElement("audio");
+tkaudio.src = "assets/sound/decision13.mp3";
+var ckaudio = document.createElement("audio");
+ckaudio.src = "assets/sound/decision15.mp3";
 $("#redtext").hide();
 
 console.log("ok");
@@ -19,6 +23,22 @@ $('.dot').click(function() {
 		
 });
 
+function tkbutton(){
+	$('.button').mouseenter(function() { 
+		if($(this).attr('deactivated') != "yes"){
+			$('.button').click(function() { 
+				ckaudio.currentTime = 0;
+				ckaudio.play();
+			});
+			tkaudio.currentTime = 0;
+			tkaudio.play();
+			$(this).attr('hover','yes');
+		}
+	});
+	$('.button').mouseleave(function() { 
+		$(this).removeAttr('hover');
+	});
+}
 
 console.log("whidth:"+document.body.offsetWidth);
 console.log("Height:"+document.body.offsetHeight);
@@ -81,12 +101,7 @@ function oneright(){
 		},3000);
 		
 	});
-	$('.button').mouseenter(function() { 
-		if($(this).attr('deactivated') != "yes")$(this).attr('hover','yes');
-	});
-	$('.button').mouseleave(function() { 
-		$(this).removeAttr('hover');
-	});
+	tkbutton();
 }
 
 function runlu(r){
@@ -127,12 +142,7 @@ function runlu(r){
 			}
 		}
 	});
-	$('.button').mouseenter(function() { 
-		if($(this).attr('deactivated') != "yes")$(this).attr('hover','yes');
-	});
-	$('.button').mouseleave(function() { 
-		$(this).removeAttr('hover');
-	});
+	tkbutton();
 }
 var goalbn = 0;
 function go(n){
@@ -187,12 +197,7 @@ function go(n){
 						btv.html('');
 						setTimeout(oneright,500);
 					});
-					$('.button').mouseenter(function() { 
-						if($(this).attr('deactivated') != "yes")$(this).attr('hover','yes');
-					});
-					$('.button').mouseleave(function() { 
-						$(this).removeAttr('hover');
-					});
+					tkbutton();
 				}
 			},2000);
 		break;
@@ -228,12 +233,7 @@ function go(n){
 						setTimeout(function(){runlu(1)},500);
 					}
 				});
-				$('.button').mouseenter(function() { 
-					if($(this).attr('deactivated') != "yes")$(this).attr('hover','yes');
-				});
-				$('.button').mouseleave(function() { 
-					$(this).removeAttr('hover');
-				});
+				tkbutton();
 				}
 			},2000);
 		break;
@@ -246,7 +246,7 @@ function go(n){
 					okarry[0] = 1;
 					setTimeout(function(){
 						if(goalbn == 3){
-						downv.html("旁邊的草叢突然出現一位警察…<br>恭喜你收到了一張「未依規定二段式左轉」的600元罰單");
+						downv.html('旁邊的草叢突然出現一位警察…<br>恭喜你收到「未依規定二段式左轉」的600元罰單<br><br>實際案例：<a target="_blank" href="http://news.ltn.com.tw/news/local/paper/966053">習慣直接左轉 警罰單開到手軟</a>');
 						bgCover("https://i.imgur.com/bJ2Tko7.png");
 						tmd();
 						}
@@ -257,7 +257,7 @@ function go(n){
 					setTimeout(function(){
 						if(goalbn == 3){
 						audio.play();
-						downv.html("你急忙的右轉切到外車道，來進行待轉<br>卻不小心被後面的機車撞上….");
+						downv.html('你急忙的右轉切到外車道，來進行待轉<br>卻不小心被後面的機車撞上….<br><br>實際案例：<a target="_blank" href="https://www.ettoday.net/news/20160630/726482.htm">想進待轉區...女騎士二段式左轉遭撞</a>');
 						bgCover("https://i.imgur.com/mTmkgDz.png");
 						tmd();
 						}
@@ -278,7 +278,7 @@ function go(n){
 					okarry[3] = 1;
 					setTimeout(function(){
 						if(goalbn == 3){
-						downv.html("未設置兩段式左轉路口，逕行待轉<br>屬於違規行為，有開單案例");
+						downv.html('未設置兩段式左轉路口，逕行待轉<br>屬於違規行為<br><br>實際案例：<a target="_blank" href="http://news.ltn.com.tw/news/society/breakingnews/1541784">沒設待轉區 騎士左轉挨罰</a>');
 						bgCover("https://i.imgur.com/bJ2Tko7.png");
 						tmd();
 						}
@@ -305,19 +305,14 @@ function go(n){
 							go("2");
 						});
 					}
-					$('.button').mouseenter(function() { 
-						if($(this).attr('deactivated') != "yes")$(this).attr('hover','yes');
-					});
-					$('.button').mouseleave(function() { 
-						$(this).removeAttr('hover');
-					});
+					tkbutton();
 				}
 		break;
 		case "4":
 			okarry = [0,0,0,0];
 			bgCover("https://i.imgur.com/UgoXnXC.png");
 			headv.html("<br><b>到底該如何左轉</b>");
-			downv.html("兩段式左轉的問題存在已久<br>近年來更是不少廢除的聲浪<br>但廢除與否仍有正反兩方支持<br><br>支持廢除者認為：<br>當年參考日本所設立的兩段式待轉<br>在日本只有50cc以下的車型需要遵守<br>一般重型機車在小條馬路易造成事故、堵塞。<br><br>反對廢除者認為：<br>日本的機車數量少於台灣甚多<br>可能隨時衝出來的人、車、其他動物<br>讓機車待轉不與汽車爭道才是安全的作法<br><br>");
+			downv.html("兩段式左轉的問題存在已久<br>近年來更是不少不強制待轉的聲浪<br>但廢除與否仍有正反兩方支持<br><br>支持不強制待轉者認為：<br>當年參考日本所設立的兩段式待轉<br>在日本只有50cc以下的車型需要遵守<br>一般重型機車在小條馬路易造成事故、堵塞。<br><br>反對不強制待轉者認為：<br>日本的機車數量少於台灣甚多<br>可能隨時衝出來的人、車、其他動物<br>讓機車待轉不與汽車爭道才是安全的作法<br><br>");
 			downv.css("top","80");
 			btv.html('<div id="startbtpage"  class="object button" style="left: 382px; top: 450px;"><div id="background"></div><div id="text">繼續</div><div id="hitbox"></div></div>');
 			$('#startbtpage').click(function() { 
@@ -334,23 +329,13 @@ function go(n){
 					window.open('http://www.facebook.com/share.php?u=https://funtuan.github.io/Mobiuscooter/' );
 				
 				});
-				$('.button').mouseenter(function() { 
-					if($(this).attr('deactivated') != "yes")$(this).attr('hover','yes');
-				});
-				$('.button').mouseleave(function() { 
-					$(this).removeAttr('hover');
-				});
+				tkbutton();
 			});
 			
 			
 		break;
 	}
-	$('.button').mouseenter(function() { 
-		if($(this).attr('deactivated') != "yes")$(this).attr('hover','yes');
-	});
-	$('.button').mouseleave(function() { 
-		$(this).removeAttr('hover');
-	});
+	tkbutton();
 }
 $(document).ready(function(){
 	setTimeout(function(){go("-1");},100);
