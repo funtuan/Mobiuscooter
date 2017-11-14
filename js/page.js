@@ -216,7 +216,7 @@ function go(n){
 					setTimeout(function(){
 						if(goalbn == 3){
 						audio.play();
-						downv.html("你急忙的想要切到外車道，來進行待轉<br>卻不小心被後面的機車撞上….");
+						downv.html("你急忙的右轉切到外車道，來進行待轉<br>卻不小心被後面的機車撞上….");
 						bgCover("https://i.imgur.com/mTmkgDz.png");
 						tmd();
 						}
@@ -227,7 +227,7 @@ function go(n){
 					setTimeout(function(){
 						if(goalbn == 3){
 						audio.play();
-						downv.html("因為已經到路口，你急忙的切換到內車道<br>卻不小心被後面的汽車撞上….");
+						downv.html("已經到路口，你急忙的左轉切換到內車道<br>卻不小心被後面的汽車撞上….");
 						bgCover("https://i.imgur.com/buLaG3Z.png");
 						tmd();
 						}
