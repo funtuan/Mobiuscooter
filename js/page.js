@@ -273,6 +273,7 @@ function go(n){
 				}
 		break;
 		case "4":
+			okarry = [0,0,0,0];
 			bgCover("https://i.imgur.com/UgoXnXC.png");
 			headv.html("<br><b>二段式的結局</b>");
 			downv.html("長年來<br>二段式左轉存在許多問題<br>影響我們每一個人的生活<br><br>很多人都曉得<br>待轉大富翁新聞<br>但鮮少人去真正瞭解<br>這議題本身背後的含意<br><br>我們希望<br>能藉由互動式遊戲<br>讓大家能獨立思考理性分析<br>增加知識藉此減少社會衝突<br><br><br>");
