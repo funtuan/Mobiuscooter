@@ -105,24 +105,26 @@ function runlu(r){
 	btv.html('<div id="startbt5" '+bta+' class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">直接左轉</div><div id="hitbox"></div></div><div id="startbt6" '+btb+' class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">待轉</div><div id="hitbox"></div></div>');
 	backsec(3);
 	$('.button').click(function() { 
-		sec = -1;
-		$("#redtext").hide();
-		turn_turn_sign_flag = false;
-		if($(this).attr('id') == "startbt5"){
-			turn_flag=2;
-			gowhere = 0;
-			oldcheck.removeAttr('selected');
-			$("#selone3").attr('selected','yes');
-			oldcheck = $("#selone3");
-			go("3");
-		}
-		if($(this).attr('id') == "startbt6"){
-			turn_flag=3;
-			gowhere = 1;
-			oldcheck.removeAttr('selected');
-			$("#selone3").attr('selected','yes');
-			oldcheck = $("#selone3");
-			go("3");
+		if($(this).attr('deactivated') != "yes"){
+			sec = -1;
+			$("#redtext").hide();
+			turn_turn_sign_flag = false;
+			if($(this).attr('id') == "startbt5"){
+				turn_flag=2;
+				gowhere = 0;
+				oldcheck.removeAttr('selected');
+				$("#selone3").attr('selected','yes');
+				oldcheck = $("#selone3");
+				go("3");
+			}
+			if($(this).attr('id') == "startbt6"){
+				turn_flag=3;
+				gowhere = 1;
+				oldcheck.removeAttr('selected');
+				$("#selone3").attr('selected','yes');
+				oldcheck = $("#selone3");
+				go("3");
+			}
 		}
 	});
 	$('.button').mouseenter(function() { 
@@ -210,14 +212,14 @@ function go(n){
 				if(okarry[2] == 1 && okarry[3] == 1)btb = 'deactivated="yes"';
 				btv.html('<div id="startbt3" '+bta+' class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">靠左</div><div id="hitbox"></div></div><div id="startbt4" '+btb+' class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">靠右</div><div id="hitbox"></div></div>');
 				$('.button').click(function() { 
-					if($(this).attr('id') == "startbt3"){
+					if($(this).attr('deactivated') != "yes")if($(this).attr('id') == "startbt3"){
 						like(1);
 						headv.html("");
 						downv.html("");
 						btv.html('');
 						setTimeout(function(){runlu(0)},500);
 					}
-					if($(this).attr('id') == "startbt4"){
+					if($(this).attr('deactivated') != "yes")if($(this).attr('id') == "startbt4"){
 						like(0);
 						headv.html("");
 						downv.html("");
