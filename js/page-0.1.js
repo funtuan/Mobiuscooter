@@ -10,6 +10,20 @@ var ckaudio = document.createElement("audio");
 ckaudio.src = "assets/sound/decision15.mp3";
 $("#redtext").hide();
 
+$('#sound').click(function() { 
+	if($(this).attr("sound") == "on"){
+		$(this).attr('sound','off');
+		audio.muted = true;
+		tkaudio.muted = true;
+		ckaudio.muted = true;
+	}else{
+		$(this).attr('sound','on');
+		audio.muted = false;
+		tkaudio.muted = false;
+		ckaudio.muted = false;
+	}
+});
+
 console.log("ok");
 $('.dot').click(function() { 
 	turn_turn_sign_flag = false;
