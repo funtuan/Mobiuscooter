@@ -316,17 +316,15 @@ function go(n){
 			headv.html("<br><b>二段式的結局</b>");
 			downv.html("長年來<br>二段式左轉存在許多問題<br>影響我們每一個人的生活<br><br>很多人都曉得<br>待轉大富翁新聞<br>但鮮少人去真正瞭解<br>這議題本身背後的含意<br><br>我們希望<br>能藉由互動式遊戲<br>讓大家能獨立思考理性分析<br>增加知識藉此減少社會衝突<br><br><br>");
 			downv.css("top","80");
-			btv.html('<div id="startbtmake" class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">關於作者</div><div id="hitbox"></div></div><div id="startbtmore" class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">了解更多</div><div id="hitbox"></div></div>');
+			btv.html('<div id="startbtmake" class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">關於作者</div><div id="hitbox"></div></div><div id="startbtmore" class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">FB分享</div><div id="hitbox"></div></div>');
 			$('#startbtmake').click(function() { 
 				headv.html("<br><b>作者們</b>");
-				downv.html('<a href="mailto:hank85627@gmail.com" target="_blank">本丸</a><br>企劃<br><br><a href="mailto:eeee2222345@gmail.com" target="_blank">陶淵明</a><br>資深工程師<br><br><a href="mailto:jadeliu.me@gmail.com" target="_blank">Jade Liu</a><br>遊戲企劃、美術<br><br>');
-				downv.css("top","160");
+				downv.html('謝絕贊助<br>請多多關心這個社會<br>有很多值得你在意的事<br><br><a href="mailto:hank85627@gmail.com" target="_blank">本丸</a><br>企劃<br><br><a href="mailto:eeee2222345@gmail.com" target="_blank">陶淵明</a><br>資深工程師<br><br><a href="mailto:jadeliu.me@gmail.com" target="_blank">Jade Liu</a><br>遊戲企劃、美術<br><br>');
+				downv.css("top","100");
 			
 			});
 			$('#startbtmore').click(function() { 
-				headv.html("<br><b>更多資訊</b>");
-				downv.html('謝絕贊助<br>請多多關心這個社會<br>有很多值得你在意的事<br><br><br>分享請註明來源<br>不可用於商業用途');
-				downv.css("top","160");
+				window.open('http://www.facebook.com/share.php?u=https://funtuan.github.io/Mobiuscooter/' );
 			
 			});
 		break;
