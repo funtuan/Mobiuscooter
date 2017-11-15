@@ -331,7 +331,7 @@ function go(n){
 			btv.html('<div id="startbtpage"  class="object button" style="left: 382px; top: 450px;"><div id="background"></div><div id="text">繼續</div><div id="hitbox"></div></div>');
 			$('#startbtpage').click(function() { 
 				headv.html("<br><b>到底該如何左轉-2</b>");
-				downv.html("2017年5月「公共政策網路參與平臺」<br>出現「機車應解除強制二段式左轉」的提案<br>吸引5397人附議通過。交通部回應表示：<br>多數地方政府認為不應廢除<br>但可「因地制宜」進行評估。<br>最主要原因在南北、城鄉的用路習慣差異。<br><br>機車到底要怎麼左轉？<br>靠左？靠右？<br><br>把我這困擾許久的問題提出來<br>做成互動式遊戲，給大眾們思考<br>【如果你喜歡這樣的模式，請分享出去】<br>你的支持，鼓勵我們繼續創作");
+				downv.html("目前台灣法規為<br>有標誌 有待轉區 > 強制二段式<br>無標誌 有待轉區 > 不強制二段式<br>有標誌 無待轉區 > 規劃錯了<br>無標誌 無待轉區 > 禁止二段式左轉<br>這樣搞得清楚嗎？<br><br>所以機車左轉到底要？<br>靠左？靠右？<br><br>把我這困擾許久的問題提出來<br>做成互動式遊戲，給大眾們思考<br>【如果你喜歡這樣的模式，請分享出去】<br>你的支持，鼓勵我們繼續創作");
 				btv.html('<div id="startbtmake" class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">關於作者</div><div id="hitbox"></div></div><div id="startbtmore" class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">FB分享</div><div id="hitbox"></div></div>');
 				$('#startbtmake').click(function() { 
 					headv.html("<br><b>作者們</b>");
