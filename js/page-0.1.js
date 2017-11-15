@@ -292,7 +292,7 @@ function go(n){
 					okarry[3] = 1;
 					setTimeout(function(){
 						if(goalbn == 3){
-						downv.html('未設置兩段式左轉路口，逕行待轉<br>屬於違規行為<br><br>實際案例：<a target="_blank" href="http://www.setn.com/News.aspx?NewsID=241354">沒有待轉格，二段式左轉屬違規</a>');
+						downv.html('未設置待轉格的路口，逕行待轉<br>屬於違規行為<br><br>實際案例：<a target="_blank" href="http://www.setn.com/News.aspx?NewsID=241354">沒有待轉格，二段式左轉屬違規</a>');
 						bgCover("https://i.imgur.com/bJ2Tko7.png");
 						tmd();
 						}
