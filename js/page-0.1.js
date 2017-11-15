@@ -5,7 +5,7 @@ var sec = -1;
 var audio = document.createElement("audio");
 audio.src = "assets/sound/car-sudden-braking1.mp3";
 var tkaudio = document.createElement("audio");
-tkaudio.src = "assets/sound/decision13.mp3";
+tkaudio.src = "assets/sound/cursor2.mp3";
 var ckaudio = document.createElement("audio");
 ckaudio.src = "assets/sound/decision15.mp3";
 $("#redtext").hide();
@@ -23,10 +23,6 @@ $('#sound').click(function() {
 		ckaudio.muted = false;
 	}
 });
-$(this).attr('sound','off');
-audio.muted = true;
-tkaudio.muted = true;
-ckaudio.muted = true;
 
 console.log("ok");
 $('.dot').click(function() { 
