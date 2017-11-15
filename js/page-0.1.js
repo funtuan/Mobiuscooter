@@ -331,7 +331,7 @@ function go(n){
 			btv.html('<div id="startbtpage"  class="object button" style="left: 382px; top: 450px;"><div id="background"></div><div id="text">繼續</div><div id="hitbox"></div></div>');
 			$('#startbtpage').click(function() { 
 				headv.html("<br><b>到底該如何左轉-2</b>");
-				downv.html("<br>2017年5月「公共政策網路參與平臺」<br>出現「機車應解除強制二段式左轉」的提案<br>吸引5397人附議通過。交通部回應表示：<br>多數地方政府認為不應廢除<br>但可「因地制宜」進行評估。<br>最主要原因在南北、城鄉的用路習慣差異。<br><br>想更加了解差異點的原因在哪？<br><br>【請分享我們的遊戲】<br>達到一定數量即可解鎖十字路口沙盒模式<br>一起探討車流與待轉的關係");
+				downv.html("2017年5月「公共政策網路參與平臺」<br>出現「機車應解除強制二段式左轉」的提案<br>吸引5397人附議通過。交通部回應表示：<br>多數地方政府認為不應廢除<br>但可「因地制宜」進行評估。<br>最主要原因在南北、城鄉的用路習慣差異。<br><br>機車到底要怎麼左轉？<br>靠左？靠右？<br><br>把我這困擾許久的問題提出來<br>做成互動式遊戲，給大眾們思考<br>【如果你喜歡這樣的模式，請分享出去】<br>我們將繼續打造");
 				btv.html('<div id="startbtmake" class="object button" style="left: 275px; top: 450px;"><div id="background"></div><div id="text">關於作者</div><div id="hitbox"></div></div><div id="startbtmore" class="object button" style="left: 495px; top: 450px;"><div id="background"></div><div id="text">FB分享</div><div id="hitbox"></div></div>');
 				$('#startbtmake').click(function() { 
 					headv.html("<br><b>作者們</b>");
