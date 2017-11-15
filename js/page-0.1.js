@@ -23,6 +23,10 @@ $('#sound').click(function() {
 		ckaudio.muted = false;
 	}
 });
+$(this).attr('sound','off');
+audio.muted = true;
+tkaudio.muted = true;
+ckaudio.muted = true;
 
 console.log("ok");
 $('.dot').click(function() { 
